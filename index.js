@@ -1,12 +1,20 @@
 // TODO: Buatlah data dari kedua user di sini
 // Tentukan tipe data dan struktur data yang menurut kalian tepat
 // Kalian bisa membuat variabel lain untuk dimasukkan ke dalam atribut user agar lebih mudah dibaca
+
+
+const monicaFavColor = ['Yellow', 'Pink', 'White', 'Purple'];
+const monicaFavRest = ['Bento', 'Sushi', 'Pancake', 'Eggy', 'Tempura', 'Bento', 'Eggy', 'Padang', 'Tteok', 'Sushi', 'Sushi'];
+
+let setMonicaColor = new Set(monicaFavColor);
+let setMonicaRest = new Set(monicaFavRest);
+
 const firstUser = {
     name: 'Monica',
     gender: 'Female',
     age: 17,
     email: 'monica@dingdong.com',
-    favoriteColor: [], 
+    favoriteColor: [...setMonicaColor], 
     isHavePet: true,
     education: [{
         name: 'SD 01', 
@@ -22,28 +30,21 @@ const firstUser = {
         name: 'SMA 03', 
         city: 'Tangerang'
     }],
-    favoriteRestaurant: new Set()
+    favoriteRestaurant: [...setMonicaRest]
 };
 
+const wendyFavColor = ['Blue', 'Black', 'Grey'];
+const wendyFavRest = ['Tempura', 'Bento', 'Sushi', 'Pancake', 'Padang', 'Katsu', 'Geprek', 'Pancake', 'Eggy'];
 
-let favColor = ['Yellow', 'Pink', 'White', 'Purple'];
-
-for (let i = 0; i < favColor.length; i++) {
-    firstUser.favoriteColor.push(favColor[i]);
-}
-
-let favRest = ['Bento', 'Sushi', 'Pancake', 'Eggy', 'Tempura', 'Bento', 'Eggy', 'Padang', 'Tteok', 'Sushi', 'Sushi'];
-
-for (let i = 0; i < favRest.length; i++) {
-    firstUser.favoriteRestaurant.add(favRest[i]);
-}
+let setWendyColor = new Set(wendyFavColor);
+let setWendyRest = new Set(wendyFavRest);
 
 const secondUser = {
     name: 'Wendy',
     gender: 'Male',
     age: 23,
     email: 'wendy@dingdong.com',
-    favoriteColor: [],
+    favoriteColor: [...setWendyColor],
     isHavePet: false,
     education: [{
         name: 'SD 02',
@@ -64,21 +65,9 @@ const secondUser = {
         name: 'Universitas Maju',
         city: 'Tangerang'
     }],
-    favoriteRestaurant: new Set()
+    favoriteRestaurant: [...setWendyRest]
 };
 
-favColor = ['Blue', 'Black', 'Grey'];
-
-for (let i = 0; i < favColor.length; i++) {
-    secondUser.favoriteColor.push(favColor[i]);
-}
-
-
-favRest = ['Tempura', 'Bento', 'Sushi', 'Pancake', 'Padang', 'Katsu', 'Geprek', 'Pancake', 'Eggy'];
-
-for (let i = 0; i < favRest.length; i++) {
-    secondUser.favoriteRestaurant.add(favRest[i]);
-}
 
 // TODO: Masukkan hasil akhir dari kedua user di sini
 const users = [];
