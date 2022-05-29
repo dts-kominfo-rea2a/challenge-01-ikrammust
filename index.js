@@ -6,7 +6,7 @@ const firstUser = {
     gender: 'Female',
     age: 17,
     email: 'monica@dingdong.com',
-    favoriteColor: new Set(),
+    favoriteColor: [], 
     isHavePet: true,
     education: [{
         name: 'SD 01', 
@@ -25,12 +25,12 @@ const firstUser = {
     favoriteRestaurant: new Set()
 };
 
+
 let favColor = ['Yellow', 'Pink', 'White', 'Purple'];
 
 for (let i = 0; i < favColor.length; i++) {
-    firstUser.favoriteColor.add(favColor[i]);
+    firstUser.favoriteColor.push(favColor[i]);
 }
-
 
 let favRest = ['Bento', 'Sushi', 'Pancake', 'Eggy', 'Tempura', 'Bento', 'Eggy', 'Padang', 'Tteok', 'Sushi', 'Sushi'];
 
@@ -43,7 +43,7 @@ const secondUser = {
     gender: 'Male',
     age: 23,
     email: 'wendy@dingdong.com',
-    favoriteColor: new Set(),
+    favoriteColor: [],
     isHavePet: false,
     education: [{
         name: 'SD 02',
@@ -70,7 +70,7 @@ const secondUser = {
 favColor = ['Blue', 'Black', 'Grey'];
 
 for (let i = 0; i < favColor.length; i++) {
-    secondUser.favoriteColor.add(favColor[i]);
+    secondUser.favoriteColor.push(favColor[i]);
 }
 
 
